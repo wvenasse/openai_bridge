@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../temp/utils/common_toast.dart';
 import 'dart:math' as math;
-import './res/listData.dart';
+import '../widget/post.dart';
+import '../widget/config.dart';
 import 'package:dio/dio.dart';
 import 'dart:convert';
 import 'package:flutter/cupertino.dart';
@@ -52,7 +53,7 @@ class _ChatState extends State<Chat> {
     BaseOptions options = BaseOptions();
     const PASS_ID = 'shwang';
     var TimeStampInSecond = (DateTime.now().millisecondsSinceEpoch/1000).toString();
-    const SECRET = 'openA1=Bridge';
+    const SECRET = Config.SECRET;
     var TOKEN = '$PASS_ID:$SECRET@$TimeStampInSecond';
     options.headers['X-BRIDGE-PASS-TOKEN'] = generateMD5(TOKEN);
     options.headers['X-BRIDGE-PASS-ID'] = PASS_ID;
@@ -118,7 +119,7 @@ class _ChatState extends State<Chat> {
     BaseOptions options = BaseOptions();
     const PASS_ID = 'shwang';
     var TimeStampInSecond = (DateTime.now().millisecondsSinceEpoch/1000).toString();
-    const SECRET = 'openA1=Bridge';
+    const SECRET = Config.SECRET;
     var TOKEN = '$PASS_ID:$SECRET@$TimeStampInSecond';
     options.headers['X-BRIDGE-PASS-TOKEN'] = generateMD5(TOKEN);
     options.headers['X-BRIDGE-PASS-ID'] = PASS_ID;
