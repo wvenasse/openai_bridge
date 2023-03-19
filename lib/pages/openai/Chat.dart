@@ -199,6 +199,7 @@ class _ChatState extends State<Chat> {
                       ),
                     ),
                     Container(
+                      height: 30,
                       decoration: const BoxDecoration(
                       ),
                       child: ElevatedButton(
